@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Cute Letters</title>
+    <link rel="icon" href="assets/ana_icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-section { padding: 150px 0 80px; background-color: var(--bg-color); min-height: 100vh; }
+        .privacy-container { max-width: 800px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 24px; box-shadow: var(--shadow-soft); }
+        .privacy-title { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; text-align: center; }
+        .privacy-date { text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-weight: 600; }
+        .privacy-content h3 { color: var(--text-primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+        .privacy-content p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px; font-size: 1.1rem; }
+        .privacy-content a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+        .privacy-content a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .privacy-container { padding: 30px; }
+            .privacy-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <img src="assets/ana_icon.png" alt="Icon" class="nav-icon" onerror="this.style.display='none'">
+                <span class="logo-text">Cute Letters</span>
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="lang-en">Home</a>
+                <a href="index.html" class="lang-tr hide">Ana Sayfa</a>
+                
+                <!-- Main Language Switcer -->
+                <div class="main-lang-switcher">
+                    <button class="main-lang-btn active" data-site-lang="en">EN</button>
+                    <button class="main-lang-btn" data-site-lang="tr">TR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="privacy-section">
+        <div class="container">
+            <div class="privacy-container">
+                
+                <!-- English Content -->
+                <div class="lang-en">
+                    <h1 class="privacy-title">Privacy Policy</h1>
+                    <div class="privacy-date">Last Updated: 03.05.2026</div>
+                    
+                    <div class="privacy-content">
+                        <p>This privacy policy applies to the Cute Letters app (hereby referred to as "Application") for mobile devices that was created by Cute Letters.</p>
+
+                        <h3>Data Collection and Use</h3>
+                        <p>Our Application DOES NOT collect, process, store, or share any personal information, sensitive user data, or device data. You are not required to create an account or provide any personal information to use the Application.</p>
+
+                        <h3>Children's Privacy</h3>
+                        <p>The Application is safe for users of all ages, including children under the age of 13. Since we do not collect any personal data from our users, we are fully compliant with COPPA (Children’s Online Privacy Protection Act) and Google Play Family Policies.</p>
+
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions regarding privacy while using the Application, please contact us via email at:<br>
+                        Email: <a href="mailto:info@cute-letters.com">info@cute-letters.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Turkish Content -->
+                <div class="lang-tr hide">
+                    <h1 class="privacy-title">Gizlilik Politikası</h1>
+                    <div class="privacy-date">Son Güncellenme Tarihi: 03.05.2026</div>
+                    
+                    <div class="privacy-content">
+                        <p>Bu gizlilik politikası, Cute Letters tarafından geliştirilen Cute Letters adlı mobil uygulamanın bilgi toplama ve kullanım uygulamalarını açıklar.</p>
+
+                        <h3>Veri Toplama ve Kullanımı</h3>
+                        <p>Uygulamamız hiçbir şekilde kişisel veya hassas kullanıcı verisi (ad, e-posta, konum, cihaz kimliği vb.) TOPLAMAMAKTADIR, İŞLEMEMEKTEDİR, DEPOLAMAMAKTADIR ve üçüncü taraflarla PAYLAŞMAMAKTADIR. Uygulamayı kullanmak için herhangi bir hesap oluşturmanız veya kişisel bilginizi vermeniz gerekmez.</p>
+
+                        <h3>Çocukların Gizliliği</h3>
+                        <p>Bu uygulama, 13 yaşından küçük çocuklar da dahil olmak üzere her yaştan kullanıcı için güvenlidir. Uygulamamız çocuklardan veya diğer tüm kullanıcılardan hiçbir kişisel veri toplamadığı için, COPPA (Çocukların Çevrimiçi Gizliliğini Koruma Yasası) ve Google Play Aile Politikaları gibi uluslararası veri koruma standartlarına tamamen uygundur.</p>
+
+                        <h3>İletişim</h3>
+                        <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin:<br>
+                        E-posta: <a href="mailto:info@cute-letters.com">info@cute-letters.com</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; <span id="year">2026</span> Cute Letters. <span class="lang-en">All rights reserved.</span><span class="lang-tr hide">Tüm hakları saklıdır.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

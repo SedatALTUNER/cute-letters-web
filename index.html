@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Letters - Learning Made Fun</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/ana_icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Splash Screen Preloader -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-placeholder">
+                <img src="assets/ana_icon.png" alt="Cute Letters Icon" class="splash-icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <svg viewBox="0 0 100 100" class="splash-icon-fallback" style="display:none;"><circle cx="50" cy="50" r="40" fill="#A8D5BA"/><text x="50" y="55" font-family="Quicksand" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">CL</text></svg>
+            </div>
+            <h1 class="splash-title">Cute Letters</h1>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/ana_icon.png" alt="Icon" class="nav-icon" onerror="this.style.display='none'">
+                <span class="logo-text">Cute Letters</span>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#features" class="lang-en">Features</a>
+                <a href="#features" class="lang-tr hide">Özellikler</a>
+                <a href="#video" class="lang-en">Watch Demo</a>
+                <a href="#video" class="lang-tr hide">Tanıtımı İzle</a>
+                <a href="#screenshots" class="lang-en">Screenshots</a>
+                <a href="#screenshots" class="lang-tr hide">Ekran Görüntüleri</a>
+                
+                <!-- Main Language Switcer -->
+                <div class="main-lang-switcher">
+                    <button class="main-lang-btn active" data-site-lang="en">EN</button>
+                    <button class="main-lang-btn" data-site-lang="tr">TR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge lang-en">💎 100% Ad-Free & Safe For Kids</div>
+                <div class="hero-badge lang-tr hide">💎 Çocuklar İçin %100 Reklamsız ve Güvenli</div>
+                
+                <h1 class="hero-title lang-en">Discover the <span class="highlight">Joy</span> of Learning</h1>
+                <h1 class="hero-title lang-tr hide">Öğrenmenin <span class="highlight">Eğlenceli</span> Yolunu Keşfedin</h1>
+                
+                <p class="hero-subtitle lang-en">Do you want your child to learn letters, animals, and vehicles in a fun way? <strong>Cute Letters</strong> is a colorful and interactive educational app specially designed for preschool and kindergarten children!</p>
+                <p class="hero-subtitle lang-tr hide">Çocuğunuzun harfleri, hayvanları ve araçları eğlenceli bir şekilde öğrenmesini ister misiniz? <strong>Cute Letters</strong>, okul öncesi ve anaokulu çağındaki çocuklar için özel tasarlanmış, rengarenk ve interaktif bir eğitici uygulamadır!</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="store-btn apple-btn">
+                        <svg class="store-icon" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                        <div class="store-text">
+                            <span class="store-small lang-en">Download on the</span>
+                            <span class="store-small lang-tr hide">Hemen İndir</span>
+                            <span class="store-large">App Store</span>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.sedat.cuteletters" target="_blank" rel="noopener noreferrer" class="store-btn google-btn">
+                        <svg class="store-icon" viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                        <div class="store-text">
+                            <span class="store-small lang-en">Download on the</span>
+                            <span class="store-small lang-tr hide">Hemen İndir</span>
+                            <span class="store-large">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Landscape Mockup -->
+            <div class="hero-image-wrapper">
+                <div class="blob-bg"></div>
+                <div class="mockup-placeholder landscape" style="padding: 0;">
+                    <img src="assets/splash_screen.webp" alt="Cute Letters Mockup" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Intro Section -->
+    <section class="intro-details">
+        <div class="container text-center max-w-800">
+            <h2 class="section-title lang-en">Why <span class="highlight">Cute Letters</span>?</h2>
+            <h2 class="section-title lang-tr hide">Neden <span class="highlight">Cute Letters</span>?</h2>
+            
+            <p class="intro-description lang-en">Learning has never been this enjoyable with fun animations, cute surprises, and background music. Your child will discover the <strong>magical world behind each letter</strong> simply by touching the screen.</p>
+            <p class="intro-description lang-tr hide">Eğlenceli animasyonlar, sevimli sürprizler ve arka plan müzikleri ile öğrenmek hiç bu kadar keyifli olmamıştı. Çocuğunuz sadece ekrana dokunarak <strong>her bir harfin ardındaki büyüleyici dünyayı</strong> keşfedecek.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Key Features</h2>
+            <h2 class="section-title lang-tr hide">Temel Özellikler</h2>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon mint">📚</div>
+                    <h3 class="lang-en">2 Categories</h3>
+                    <h3 class="lang-tr hide">2 Farklı Kategori</h3>
+                    <p class="lang-en">Expand vocabulary thoroughly with two diverse options: <strong>Animals</strong> and <strong>Vehicles</strong>.</p>
+                    <p class="lang-tr hide"><strong>Hayvanlar</strong> ve <strong>Araçlar</strong> kategorileri ile çocuğunuzun kelime dağarcığını geliştirin.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon lavender">✨</div>
+                    <h3 class="lang-en">Interactive Animations</h3>
+                    <h3 class="lang-tr hide">İnteraktif Animasyonlar</h3>
+                    <p class="lang-en">Fun animations that come to life with a touch, capturing children's attention instantly.</p>
+                    <p class="lang-tr hide">Ekrana dokunduğunuzda canlanan eğlenceli animasyonlar çocukların dikkatini her an canlı tutar.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon peach">❤️</div>
+                    <h3 class="lang-en">Favorites Section</h3>
+                    <h3 class="lang-tr hide">Favorilerim Bölümü</h3>
+                    <p class="lang-en">Save your child's favorite characters with a single touch to watch them again anytime!</p>
+                    <p class="lang-tr hide">Çocuğunuzun en sevdiği karakterleri tek bir dokunuşla (kalp simgesi) kaydedin, tekrar izleyin!</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon mint">🎮</div>
+                    <h3 class="lang-en">Kid-Friendly Controls</h3>
+                    <h3 class="lang-tr hide">Çocuk Dostu Kontroller</h3>
+                    <p class="lang-en">A simple, completely ad-free, and safe interface seamlessly designed for children.</p>
+                    <p class="lang-tr hide">Tamamen çocukların kolay kullanımı için tasarlanmış basit, reklamsız ve güvenli arayüz.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon lavender">⚙️</div>
+                    <h3 class="lang-en">Customizable Experience</h3>
+                    <h3 class="lang-tr hide">Özelleştirilebilir Deneyim</h3>
+                    <p class="lang-en">Toggle background music, repeat animations or auto-close when finished.</p>
+                    <p class="lang-tr hide">Müziği kapatıp açma, animasyonu tekrarlama veya otomatik kapatma gibi size özel ayarlar.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card premium">
+                    <div class="feature-icon peach">💎</div>
+                    <h3 class="lang-en">Ad-Free & Premium</h3>
+                    <h3 class="lang-tr hide">Reklamsız ve Güvenli</h3>
+                    <p class="lang-en">Upgrade to bypass limits and unlock all features. <em>(Or play daily with free videos!)</em></p>
+                    <p class="lang-tr hide">Premium ile günlük limitlere takılmadan sırınsız eğlenin. <em>(Veya her gün yenilenen ücretsiz videoları izleyin!)</em></p>
+                </div>
+            </div>
+            
+            <div class="features-footer text-center">
+                <p class="lang-en">Our app doesn't just teach letters; it also supports children's <strong>visual memory</strong> and <strong>auditory skills</strong>. No complicated menus—just open it and let the fun begin!</p>
+                <p class="lang-tr hide">Uygulamamız sadece harfleri öğretmekle kalmaz, çocukların <strong>görsel hafızasını</strong> ve <strong>işitsel yeteneklerini</strong> de destekler. Sadece açın ve eğlence başlasın!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2 class="section-title lang-en">See It In Action</h2>
+            <h2 class="section-title lang-tr hide">Uygulamayı Çalışırken Görün</h2>
+            <!-- English Promo Video -->
+            <div class="video-container landscape lang-en">
+                <video src="assets/en/promo_video_en.mp4" controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;"></video>
+            </div>
+            <!-- Turkish Promo Video -->
+            <div class="video-container landscape lang-tr hide">
+                <video src="assets/tr/promo_video_tr.mp4" controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Screenshots Section (Dynamic based on selected language) -->
+    <section id="screenshots" class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Explore the App</h2>
+            <h2 class="section-title lang-tr hide">Uygulamayı İnceleyin</h2>
+            
+            <div class="gallery-wrapper">
+                <button class="gallery-nav prev-btn" aria-label="Previous">❮</button>
+                <!-- English Screenshots -->
+                <div class="gallery-grid lang-en">
+                    <img src="assets/en/IMG_0318.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 1">
+                    <img src="assets/en/IMG_0319.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 2">
+                    <img src="assets/en/IMG_0320.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 3">
+                    <img src="assets/en/IMG_0321.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 4">
+                    <img src="assets/en/IMG_0322.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 5">
+                    <img src="assets/en/IMG_0323.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 6">
+                    <img src="assets/en/IMG_0325.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 7">
+                    <img src="assets/en/IMG_0326.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 8">
+                    <img src="assets/en/IMG_0327.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 9">
+                </div>
+                
+                <!-- Turkish Screenshots -->
+                <div class="gallery-grid lang-tr hide">
+                    <img src="assets/tr/IMG_0.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 1">
+                    <img src="assets/tr/IMG_1.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 2">
+                    <img src="assets/tr/IMG_2.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 3">
+                    <img src="assets/tr/IMG_3.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 4">
+                    <img src="assets/tr/IMG_4.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 5">
+                    <img src="assets/tr/IMG_0328.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 6">
+                    <img src="assets/tr/IMG_0330.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 7">
+                </div>
+                <button class="gallery-nav next-btn" aria-label="Next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Socials -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3><img src="assets/ana_icon.png" alt="" class="nav-icon" onerror="this.style.display='none'"> Cute Letters</h3>
+                <p class="lang-en">Making early childhood learning gentle and fun.</p>
+                <p class="lang-tr hide">Okul öncesi öğrenmeyi eğlenceli ve keyifli hale getiriyoruz.</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/cutelettersapp/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                    <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a>
+                <a href="#" class="social-btn facebook" aria-label="Facebook">
+                    <svg viewBox="0 0 320 512" fill="currentColor"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@cutelettersapp" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+                    <svg viewBox="0 0 448 512" fill="currentColor"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                </a>
+            </div>
+            
+            <p class="copyright">
+                &copy; <span id="year">2026</span> Cute Letters. <span class="lang-en">All rights reserved.</span><span class="lang-tr hide">Tüm hakları saklıdır.</span><br>
+                <a href="privacy.html" class="lang-en" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">Privacy Policy</a>
+                <a href="privacy.html" class="lang-tr hide" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">Gizlilik Politikası</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
