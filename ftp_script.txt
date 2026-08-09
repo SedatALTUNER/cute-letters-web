@@ -1,0 +1,7 @@
+open ftp.cute-letters.com
+info@cute-letters.com
+k76uUetenpPbUS8
+lcd e:\ws_harfler\cute_letters_web_site
+put app-ads.txt
+dir
+quit
