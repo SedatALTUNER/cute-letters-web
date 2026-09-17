@@ -102,8 +102,9 @@
             <!-- Landscape Mockup -->
             <div class="hero-image-wrapper">
                 <div class="blob-bg"></div>
-                <div class="mockup-placeholder landscape" style="padding: 0;">
-                    <img src="assets/splash_screen.webp" alt="Cute Letters Mockup" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+                <div class="mockup-placeholder landscape" style="padding: 0; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid var(--white); border-radius: 24px;">
+                    <img src="assets/en/en_main.jpeg" alt="Cute Letters Home" class="lang-en" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+                    <img src="assets/tr/tr_main_page.jpeg" alt="Cute Letters Ana Sayfa" class="lang-tr hide" style="display: block; width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -117,6 +118,27 @@
             
             <p class="intro-description lang-en">Explore the alphabet with enchanting animations, cheerful surprises, and studio-grade voiceovers. Children discover the <strong>magical world behind each letter</strong> through touch and sound.</p>
             <p class="intro-description lang-tr hide">Büyüleyici animasyonlar, neşeli sürprizler ve profesyonel stüdyo seslendirmeleriyle harfleri keşfedin. Çocuklar sadece ekrana dokunarak <strong>her harfin ardındaki canlı dünyayı</strong> eğlenerek öğrenir.</p>
+
+            <div class="alphabet-showcase">
+                <div class="alphabet-card">
+                    <img src="assets/en/en_animals.jpeg" alt="Animals Alphabet" class="alphabet-card-img lang-en">
+                    <img src="assets/tr/tr_animals.jpeg" alt="Hayvanlar Harfleri" class="alphabet-card-img lang-tr hide">
+                    <div class="alphabet-card-info">
+                        <div class="alphabet-card-title">🦁 <span class="lang-en">Animals Category</span><span class="lang-tr hide">Hayvanlar Alemi</span></div>
+                        <p class="alphabet-card-desc lang-en">Learn alphabet letters alongside adorable animated wild and domestic animals!</p>
+                        <p class="alphabet-card-desc lang-tr hide">Harfleri sevimli vahşi ve evcil hayvan animasyonları eşliğinde öğrenin!</p>
+                    </div>
+                </div>
+                <div class="alphabet-card">
+                    <img src="assets/en/en_vechiles.jpeg" alt="Vehicles Alphabet" class="alphabet-card-img lang-en">
+                    <img src="assets/tr/tr_vehicles.jpeg" alt="Taşıtlar Harfleri" class="alphabet-card-img lang-tr hide">
+                    <div class="alphabet-card-info">
+                        <div class="alphabet-card-title">🚗 <span class="lang-en">Vehicles Category</span><span class="lang-tr hide">Taşıtlar Dünyası</span></div>
+                        <p class="alphabet-card-desc lang-en">Cars, planes, trains, and boats make phonetic pronunciation exciting!</p>
+                        <p class="alphabet-card-desc lang-tr hide">Arabalar, uçaklar, trenler ve gemilerle sesli harf telaffuzları çok eğlenceli!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -147,14 +169,9 @@
                             <span class="pill-tag lang-tr hide">🗺️ 4 Farklı Zorluk Haritası</span>
                         </div>
                     </div>
-                    <div class="game-preview">
-                        <div class="preview-box">
-                            <div class="preview-icon-large">🗺️⭐🎁</div>
-                            <div class="preview-title lang-en">Adventure Quest</div>
-                            <div class="preview-title lang-tr hide">Macera Haritası</div>
-                            <div class="preview-subtitle lang-en">Earn stars, unlock surprise boxes & collect all stickers!</div>
-                            <div class="preview-subtitle lang-tr hide">Yıldızları topla, hediye kutularını aç ve çıkartmaları biriktir!</div>
-                        </div>
+                    <div class="game-preview-device">
+                        <img src="assets/en/en_adventure.jpeg" alt="Adventure Map" class="game-preview-img lang-en">
+                        <img src="assets/tr/tr_adventure.jpeg" alt="Macera Haritası" class="game-preview-img lang-tr hide">
                     </div>
                 </div>
 
@@ -164,9 +181,33 @@
                         <span class="game-badge memory">🧩 Free Play Mode / Serbest Mod</span>
                         <h3 class="game-title lang-en">Memory & Pattern Matching</h3>
                         <h3 class="game-title lang-tr hide">Zeka ve Eşleştirme Oyunları</h3>
-                        <p class="game-desc lang-en">Sharpen visual memory, focus, and part-whole recognition with 4 rich mechanics: Find Same, Find Shadow, Find Part, and Find Letter! Features 3 card display modes (Open, 3s Preview, Hidden Memory) and 6 grid sizes (from 2x3 up to 3x8).</p>
-                        <p class="game-desc lang-tr hide">Görsel hafıza, parça-bütün ilişkisi ve odaklanmayı güçlendiren 4 zengin oyun mekaniği: Aynısını Bul, Gölgesini Bul, Parçasını Bul ve Harfini Bul! 3 kart modu (Açık, 3 Saniye Önizleme, Gizli Hafıza) ve 6 kademeli ızgara (2x3'ten 3x8'e) ile her yaşa uygun.</p>
+                        <p class="game-desc lang-en">Sharpen visual memory, focus, and part-whole recognition with 4 rich mechanics! Features 3 card display modes (Open, 3s Preview, Hidden Memory) and 6 grid sizes (from 2x3 up to 3x8).</p>
+                        <p class="game-desc lang-tr hide">Görsel hafıza, parça-bütün ilişkisi ve odaklanmayı güçlendiren 4 zengin oyun mekaniği! 3 kart modu (Açık, 3 Saniye Önizleme, Gizli Hafıza) ve 6 kademeli ızgara (2x3'ten 3x8'e) ile her yaşa uygun.</p>
                         
+                        <!-- 4 Mechanics Visual Chips -->
+                        <div class="mechanics-grid">
+                            <div class="mechanic-item">
+                                <img src="assets/match-same.jpeg" alt="Find Same" class="mechanic-thumb">
+                                <span class="mechanic-name lang-en">Find Same</span>
+                                <span class="mechanic-name lang-tr hide">Aynısını Bul</span>
+                            </div>
+                            <div class="mechanic-item">
+                                <img src="assets/mach_shadow.jpeg" alt="Find Shadow" class="mechanic-thumb">
+                                <span class="mechanic-name lang-en">Find Shadow</span>
+                                <span class="mechanic-name lang-tr hide">Gölgesini Bul</span>
+                            </div>
+                            <div class="mechanic-item">
+                                <img src="assets/match_part.jpeg" alt="Find Part" class="mechanic-thumb">
+                                <span class="mechanic-name lang-en">Find Part</span>
+                                <span class="mechanic-name lang-tr hide">Parçasını Bul</span>
+                            </div>
+                            <div class="mechanic-item">
+                                <img src="assets/match_letters.jpeg" alt="Find Letter" class="mechanic-thumb">
+                                <span class="mechanic-name lang-en">Find Letter</span>
+                                <span class="mechanic-name lang-tr hide">Harfini Bul</span>
+                            </div>
+                        </div>
+
                         <div class="pill-group">
                             <span class="pill-tag lang-en">👁️ Open, Preview & Memory Modes</span>
                             <span class="pill-tag lang-tr hide">👁️ Açık, Önizleme & Hafıza Modları</span>
@@ -178,27 +219,24 @@
                             <span class="pill-tag lang-tr hide">🥇 Altın Madalya Sistemi</span>
                         </div>
                     </div>
-                    <div class="game-preview">
-                        <div class="preview-box" style="background: linear-gradient(135deg, rgba(212, 196, 251, 0.25), rgba(189, 224, 254, 0.3));">
-                            <div class="preview-icon-large">🧩🎴🏆</div>
-                            <div class="preview-title lang-en">Memory Challenge</div>
-                            <div class="preview-title lang-tr hide">Serbest Hafıza Modu</div>
-                            <div class="preview-subtitle lang-en">Match shadows, letters & cards to win Gold Medals!</div>
-                            <div class="preview-subtitle lang-tr hide">Gölgeleri, harfleri ve kartları eşleştir, altın madalyayı kap!</div>
-                        </div>
+                    <div class="game-preview-device">
+                        <img src="assets/en/en_playroom.jpeg" alt="Memory Playroom" class="game-preview-img lang-en">
+                        <img src="assets/tr/tr_play_room.jpeg" alt="Hafıza ve Eşleştirme Odası" class="game-preview-img lang-tr hide">
                     </div>
                 </div>
 
-                <!-- Game 3: Smart Hints -->
+                <!-- Game 3: Games Hub & Smart Hints -->
                 <div class="game-card-wide">
                     <div class="game-info">
-                        <span class="game-badge safety">💡 Smart Hints / Sihirli İpucu</span>
+                        <span class="game-badge safety">💡 Games Hub & Smart Hints / Zeka Oyunları</span>
                         <h3 class="game-title lang-en">Always Encouraging, Never Blocked</h3>
-                        <h3 class="game-title lang-tr hide">Asla Yarı Yolda Kalmayan Küçük Kaşifler</h3>
-                        <p class="game-desc lang-en">Designed with early childhood psychology in mind! When little ones hesitate, subtle card animations or the magic bulb hint gently guide them toward the answer. No frustration, always rewarding progress!</p>
-                        <p class="game-desc lang-tr hide">Okul öncesi pedagojisine uygun olarak tasarlandı! Çocuklar zorlandığında sihirli ampul veya hafifçe titreyip parlayan kartlar doğru cevabı gösterir. Çocuk asla 0 yıldız almaz; her çabası takdir ve ödülle sonuçlanır!</p>
+                        <h3 class="game-title lang-tr hide">Her Seviyede Neşe ve Cesaret Veren Rehberlik</h3>
+                        <p class="game-desc lang-en">Choose from progressive adventures or free-play challenges anytime! Designed with early childhood psychology in mind: when little ones hesitate, subtle card animations or the magic bulb hint gently guide them toward the answer. No frustration, always rewarding progress!</p>
+                        <p class="game-desc lang-tr hide">Dilediğiniz an macera haritasına çıkın veya serbest modda pratik yapın! Okul öncesi pedagojisine uygun olarak tasarlandı: Çocuklar zorlandığında sihirli ampul veya hafifçe titreyip parlayan kartlar doğru cevabı gösterir. Çocuk asla 0 yıldız almaz; her çabası takdir ve ödülle sonuçlanır!</p>
                         
                         <div class="pill-group">
+                            <span class="pill-tag lang-en">🎮 2 Major Game Modes</span>
+                            <span class="pill-tag lang-tr hide">🎮 2 Ana Oyun Modu</span>
                             <span class="pill-tag lang-en">💡 Magic Bulb Assistance</span>
                             <span class="pill-tag lang-tr hide">💡 Sihirli Ampul Yardımı</span>
                             <span class="pill-tag lang-en">✨ Gentle Card Shakes</span>
@@ -207,14 +245,9 @@
                             <span class="pill-tag lang-tr hide">❤️ Pozitif Motivasyon</span>
                         </div>
                     </div>
-                    <div class="game-preview">
-                        <div class="preview-box" style="background: linear-gradient(135deg, rgba(255, 230, 109, 0.2), rgba(255, 218, 185, 0.3));">
-                            <div class="preview-icon-large">💡✨❤️</div>
-                            <div class="preview-title lang-en">Gentle Guidance</div>
-                            <div class="preview-title lang-tr hide">Şefkatli Rehberlik</div>
-                            <div class="preview-subtitle lang-en">Smart hints nurture confidence and curiosity.</div>
-                            <div class="preview-subtitle lang-tr hide">Özgüveni destekleyen sihirli ipuçları.</div>
-                        </div>
+                    <div class="game-preview-device">
+                        <img src="assets/en/en_games.jpg" alt="Games Selection Menu" class="game-preview-img lang-en">
+                        <img src="assets/tr/tr_games.jpg" alt="Zeka Oyunları Seçim Menüsü" class="game-preview-img lang-tr hide">
                     </div>
                 </div>
             </div>
@@ -262,6 +295,20 @@
                     <h3 class="lang-tr hide">Ücretsiz Oyna veya Premium'a Geç</h3>
                     <p class="lang-en">Enjoy daily free play supported by COPPA-compliant, child-safe ads, or make a one-time purchase to unlock 100% ad-free, unlimited access forever.</p>
                     <p class="lang-tr hide">Çocuklara özel, güvenli reklamlarla günlük haklarınızı kullanarak ücretsiz oynayın; dilerseniz tek seferlik ödemeyle %100 reklamsız sınırsız Premium'a geçin.</p>
+                </div>
+            </div>
+
+            <!-- Safety Banner with Settings Mockup -->
+            <div class="safety-banner">
+                <div class="safety-banner-info">
+                    <h3 class="lang-en">Protected by Parental Security Gate</h3>
+                    <h3 class="lang-tr hide">Ebeveyn Güvenlik Kapısı ile Koruma Altında</h3>
+                    <p class="lang-en">All settings, screen-time limits, language choices, and store purchases are safely guarded behind mathematical questions. Little ones cannot make accidental changes or purchases.</p>
+                    <p class="lang-tr hide">Tüm ayarlar, süre sınırlayıcılar, dil tercihleri ve mağaza satın alımları matematiksel güvenlik sorusuyla korunur. Çocuklar ebeveynden habersiz ayarlara giremez veya satın alma yapamaz.</p>
+                </div>
+                <div class="safety-banner-media">
+                    <img src="assets/en/en_setting.jpeg" alt="Parental Settings" class="safety-banner-img lang-en">
+                    <img src="assets/tr/tr_settings.jpeg" alt="Ebeveyn Ayarları" class="safety-banner-img lang-tr hide">
                 </div>
             </div>
         </div>
@@ -357,26 +404,25 @@
                 <button class="gallery-nav prev-btn" aria-label="Previous">❮</button>
                 <!-- English Screenshots -->
                 <div class="gallery-grid lang-en">
-                    <img src="assets/en/IMG_0318.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 1">
-                    <img src="assets/en/IMG_0319.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 2">
-                    <img src="assets/en/IMG_0320.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 3">
-                    <img src="assets/en/IMG_0321.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 4">
-                    <img src="assets/en/IMG_0322.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 5">
-                    <img src="assets/en/IMG_0323.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 6">
-                    <img src="assets/en/IMG_0325.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 7">
-                    <img src="assets/en/IMG_0326.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 8">
-                    <img src="assets/en/IMG_0327.webp" class="screenshot-image landscape" loading="lazy" alt="English Screenshot 9">
+                    <img src="assets/en/en_main.jpeg" class="screenshot-image landscape" loading="lazy" alt="Cute Letters Main Screen">
+                    <img src="assets/en/en_animals.jpeg" class="screenshot-image landscape" loading="lazy" alt="Animals Alphabet">
+                    <img src="assets/en/en_vechiles.jpeg" class="screenshot-image landscape" loading="lazy" alt="Vehicles Alphabet">
+                    <img src="assets/en/en_games.jpg" class="screenshot-image landscape" loading="lazy" alt="Brain Games Hub">
+                    <img src="assets/en/en_adventure.jpeg" class="screenshot-image landscape" loading="lazy" alt="Adventure Map">
+                    <img src="assets/en/en_playroom.jpeg" class="screenshot-image landscape" loading="lazy" alt="Memory Playroom">
+                    <img src="assets/en/en_setting.jpeg" class="screenshot-image landscape" loading="lazy" alt="Parental Settings & Lock">
+                    <img src="assets/en/en_cute_letters.jpeg" class="screenshot-image landscape" loading="lazy" alt="Interactive Letters">
                 </div>
                 
                 <!-- Turkish Screenshots -->
                 <div class="gallery-grid lang-tr hide">
-                    <img src="assets/tr/IMG_0.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 1">
-                    <img src="assets/tr/IMG_1.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 2">
-                    <img src="assets/tr/IMG_2.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 3">
-                    <img src="assets/tr/IMG_3.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 4">
-                    <img src="assets/tr/IMG_4.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 5">
-                    <img src="assets/tr/IMG_0328.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 6">
-                    <img src="assets/tr/IMG_0330.webp" class="screenshot-image landscape" loading="lazy" alt="Turkish Screenshot 7">
+                    <img src="assets/tr/tr_main_page.jpeg" class="screenshot-image landscape" loading="lazy" alt="Cute Letters Ana Sayfa">
+                    <img src="assets/tr/tr_animals.jpeg" class="screenshot-image landscape" loading="lazy" alt="Hayvanlar Harf Dünyası">
+                    <img src="assets/tr/tr_vehicles.jpeg" class="screenshot-image landscape" loading="lazy" alt="Taşıtlar Harf Dünyası">
+                    <img src="assets/tr/tr_games.jpg" class="screenshot-image landscape" loading="lazy" alt="Zeka Oyunları Menüsü">
+                    <img src="assets/tr/tr_adventure.jpeg" class="screenshot-image landscape" loading="lazy" alt="Aşamalı Macera Haritası">
+                    <img src="assets/tr/tr_play_room.jpeg" class="screenshot-image landscape" loading="lazy" alt="Hafıza ve Eşleştirme Odası">
+                    <img src="assets/tr/tr_settings.jpeg" class="screenshot-image landscape" loading="lazy" alt="Ebeveyn Ayarları ve Ekran Kilidi">
                 </div>
                 <button class="gallery-nav next-btn" aria-label="Next">❯</button>
             </div>
