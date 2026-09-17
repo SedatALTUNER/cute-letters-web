@@ -43,10 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Hide EN, Show TR
                 enElements.forEach(el => el.classList.add('hide'));
                 trElements.forEach(el => el.classList.remove('hide'));
+                document.title = "Cute Letters - Minik Parmaklara Neşeli Harfler, Parlak Zihinler";
             } else {
                 // Hide TR, Show EN
                 trElements.forEach(el => el.classList.add('hide'));
                 enElements.forEach(el => el.classList.remove('hide'));
+                document.title = "Cute Letters - Playful Letters for Little Hands, Bright Minds";
             }
         });
     });
