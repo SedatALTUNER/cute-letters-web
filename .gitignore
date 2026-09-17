@@ -14,3 +14,6 @@ Thumbs.db
 # Build/Dist
 dist/
 build/
+
+# Large local raw videos
+*_orig.mp4

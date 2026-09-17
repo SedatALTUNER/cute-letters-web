@@ -120,6 +120,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 7. Fullscreen Launch Video Modal Logic
+    const heroVideoTrigger = document.getElementById('hero-video-trigger');
+    const videoModal = document.getElementById('video-modal');
+    const videoModalClose = document.getElementById('video-modal-close');
+    const videoModalBackdrop = document.getElementById('video-modal-backdrop');
+    const launchPlayer = document.getElementById('launch-video-player');
+
+    function openLaunchVideo() {
+        if (!videoModal || !launchPlayer) return;
+        
+        // Determine active site language
+        const isTurkish = document.querySelector('.main-lang-btn[data-site-lang="tr"]')?.classList.contains('active');
+        const videoSrc = isTurkish ? 'assets/tr/tr_lasman.mp4' : 'assets/en/en_lasman.mp4';
+        
+        launchPlayer.src = videoSrc;
+        videoModal.classList.add('active');
+        videoModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        
+        launchPlayer.play().catch(e => {
+            console.log("Auto-playback notice:", e);
+        });
+    }
+
+    function closeLaunchVideo() {
+        if (!videoModal || !launchPlayer) return;
+        
+        videoModal.classList.remove('active');
+        videoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        
+        launchPlayer.pause();
+        launchPlayer.currentTime = 0;
+        launchPlayer.removeAttribute('src');
+        launchPlayer.load();
+    }
+
+    if (heroVideoTrigger) {
+        heroVideoTrigger.addEventListener('click', openLaunchVideo);
+        heroVideoTrigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLaunchVideo();
+            }
+        });
+    }
+
+    if (videoModalClose) videoModalClose.addEventListener('click', closeLaunchVideo);
+    if (videoModalBackdrop) videoModalBackdrop.addEventListener('click', closeLaunchVideo);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal?.classList.contains('active')) {
+            closeLaunchVideo();
+        }
+    });
+
     // Update current year in footer
     const yearEl = document.getElementById('year');
     if(yearEl) {

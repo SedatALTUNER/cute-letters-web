@@ -99,12 +99,23 @@
                     </a>
                 </div>
             </div>
-            <!-- Landscape Mockup -->
+            <!-- Landscape Mockup with Play Trigger -->
             <div class="hero-image-wrapper">
                 <div class="blob-bg"></div>
-                <div class="mockup-placeholder landscape">
+                <div class="mockup-placeholder landscape hero-mockup-playable" id="hero-video-trigger" role="button" tabindex="0" title="Videoyu İzle / Watch Video">
                     <img src="assets/en/en_main.jpeg" alt="Cute Letters Home" class="lang-en" style="display: block; width: 100%; height: auto; object-fit: contain;">
                     <img src="assets/tr/tr_main_page.jpeg" alt="Cute Letters Ana Sayfa" class="lang-tr hide" style="display: block; width: 100%; height: auto; object-fit: contain;">
+                    
+                    <div class="hero-play-overlay">
+                        <div class="hero-play-pulse"></div>
+                        <div class="hero-play-circle">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="hero-play-label">
+                            <span class="lang-en">▶ Watch Launch Video</span>
+                            <span class="lang-tr hide">▶ Tanıtım Videosunu İzle</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -455,6 +466,17 @@
             </p>
         </div>
     </footer>
+
+    <!-- Fullscreen Launch Video Modal -->
+    <div id="video-modal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+        <div class="video-modal-dialog">
+            <button type="button" class="video-modal-close" id="video-modal-close" aria-label="Kapat">✕</button>
+            <div class="video-modal-player-wrap">
+                <video id="launch-video-player" controls preload="metadata" playsinline></video>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -132,6 +132,86 @@ a { text-decoration: none; color: inherit; }
 /* Portrait mockup mode (fallback) */
 .mockup-placeholder:not(.landscape) { width: 280px; height: 560px; border-radius: 40px; }
 
+/* Hero Playable Mockup & Play Button Overlay */
+.hero-mockup-playable {
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-mockup-playable:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 24px 50px rgba(67, 97, 238, 0.22);
+}
+.hero-play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.25);
+    border-radius: inherit;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+.hero-mockup-playable:hover .hero-play-overlay {
+    background: rgba(15, 23, 42, 0.38);
+}
+.hero-play-circle {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4361EE 0%, #7209B7 100%);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+.hero-play-circle svg {
+    width: 34px;
+    height: 34px;
+    margin-left: 4px; /* visually center play triangle */
+}
+.hero-mockup-playable:hover .hero-play-circle {
+    transform: scale(1.12);
+    box-shadow: 0 12px 35px rgba(67, 97, 238, 0.7);
+}
+.hero-play-pulse {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.4);
+    animation: playPulse 2s infinite ease-out;
+    z-index: 1;
+}
+@keyframes playPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+.hero-play-label {
+    margin-top: 14px;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+}
+.hero-mockup-playable:hover .hero-play-label {
+    transform: translateY(2px);
+    background: #FFFFFF;
+    color: var(--primary-color);
+}
+
 @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-15px); } }
 
 /* Section general */
@@ -443,4 +523,97 @@ a { text-decoration: none; color: inherit; }
     .mechanics-grid { grid-template-columns: repeat(2, 1fr); }
     .safety-banner { flex-direction: column; text-align: center; padding: 25px; }
     .safety-banner-info { text-align: center; }
+}
+
+/* Fullscreen Launch Video Modal */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 15, 30, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.video-modal-dialog {
+    position: relative;
+    z-index: 10;
+    width: 92vw;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.video-modal.active .video-modal-dialog {
+    transform: scale(1);
+}
+.video-modal-close {
+    position: absolute;
+    top: -46px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+.video-modal-close:hover {
+    background: #FF4757;
+    border-color: #FF4757;
+    transform: rotate(90deg) scale(1.1);
+}
+.video-modal-player-wrap {
+    width: 100%;
+    background: #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+.video-modal-player-wrap video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    aspect-ratio: 21/9;
+    object-fit: contain;
+    background: #000;
+}
+@media (max-width: 768px) {
+    .video-modal-dialog {
+        width: 96vw;
+    }
+    .video-modal-close {
+        top: -42px;
+        right: 4px;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    .video-modal-player-wrap video {
+        max-height: 70vh;
+    }
 }
