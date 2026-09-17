@@ -82,20 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Gallery Navigation Buttons
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-            const activeGallery = document.querySelector('.gallery-grid:not(.hide)');
-            // Scroll by one image width roughly
-            if(activeGallery) activeGallery.scrollBy({ left: window.innerWidth < 600 ? -320 : -470, behavior: 'smooth' });
-        });
-        nextBtn.addEventListener('click', () => {
-            const activeGallery = document.querySelector('.gallery-grid:not(.hide)');
-            if(activeGallery) activeGallery.scrollBy({ left: window.innerWidth < 600 ? 320 : 470, behavior: 'smooth' });
-        });
-    }
 
     // 6. Mechanics Preview Switcher
     const previewEn = document.getElementById('match-preview-img-en');
