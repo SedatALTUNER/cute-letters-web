@@ -97,6 +97,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 6. Mechanics Preview Switcher
+    const previewEn = document.getElementById('match-preview-img-en');
+    const previewTr = document.getElementById('match-preview-img-tr');
+    const mechanicBtns = document.querySelectorAll('.mechanic-card-btn');
+    const resetBtnEn = document.getElementById('reset-preview-en');
+    const resetBtnTr = document.getElementById('reset-preview-tr');
+
+    function resetPlayroomPreview() {
+        mechanicBtns.forEach(b => b.classList.remove('active'));
+        if (previewEn) previewEn.src = 'assets/en/en_playroom.jpeg';
+        if (previewTr) previewTr.src = 'assets/tr/tr_play_room.jpeg';
+    }
+
+    if (resetBtnEn) resetBtnEn.addEventListener('click', resetPlayroomPreview);
+    if (resetBtnTr) resetBtnTr.addEventListener('click', resetPlayroomPreview);
+
+    mechanicBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isAlreadyActive = btn.classList.contains('active');
+            if (isAlreadyActive) {
+                resetPlayroomPreview();
+                return;
+            }
+
+            mechanicBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const targetImg = btn.getAttribute('data-img');
+            if (targetImg) {
+                if (previewEn) previewEn.src = 'assets/' + targetImg;
+                if (previewTr) previewTr.src = 'assets/' + targetImg;
+            }
+        });
+    });
+
     // Update current year in footer
     const yearEl = document.getElementById('year');
     if(yearEl) {
