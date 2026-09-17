@@ -126,7 +126,7 @@ a { text-decoration: none; color: inherit; }
     animation: float 4s ease-in-out infinite alternate;
 }
 /* Landscape mockup mode */
-.mockup-placeholder.landscape { width: 560px; height: 280px; border-radius: 20px; }
+.mockup-placeholder.landscape { width: 100%; max-width: 580px; height: auto; border: 6px solid var(--white); border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
 /* Portrait mockup mode (fallback) */
 .mockup-placeholder:not(.landscape) { width: 280px; height: 560px; border-radius: 40px; }
 
@@ -198,40 +198,42 @@ a { text-decoration: none; color: inherit; }
     flex: 1; display: flex; justify-content: center; align-items: center;
 }
 .game-preview-device {
-    flex: 1; display: flex; justify-content: center; align-items: center;
+    flex: 1.15; display: flex; justify-content: center; align-items: center;
     position: relative; width: 100%;
 }
 .game-preview-img {
-    width: 100%; max-width: 480px; height: auto; aspect-ratio: 16/10;
-    object-fit: cover; border-radius: 20px; border: 4px solid var(--white);
-    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+    width: 100%; max-width: 540px; height: auto;
+    object-fit: contain; border-radius: 18px; border: 3px solid var(--white);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1); display: block;
+    background: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .game-preview-device:hover .game-preview-img {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.14);
 }
 
 /* Matching Mechanics Chips (4 Types) */
 .mechanics-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
     margin: 15px 0 20px;
 }
 .mechanic-item {
     background: var(--bg-color); border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px; padding: 10px 8px; display: flex;
+    border-radius: 14px; padding: 10px; display: flex;
     flex-direction: column; align-items: center; text-align: center;
     gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .mechanic-item:hover {
-    transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 .mechanic-thumb {
-    width: 48px; height: 48px; object-fit: cover; border-radius: 10px;
-    border: 2px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 100%; height: auto; object-fit: contain; border-radius: 10px;
+    border: 2px solid var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: block; background: #ffffff;
 }
 .mechanic-name {
-    font-size: 0.8rem; font-weight: 700; color: var(--text-primary);
+    font-size: 0.85rem; font-weight: 700; color: var(--text-primary);
     line-height: 1.2;
 }
 
@@ -249,7 +251,8 @@ a { text-decoration: none; color: inherit; }
     transform: translateY(-5px); box-shadow: var(--shadow-hover);
 }
 .alphabet-card-img {
-    width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block;
+    width: 100%; height: auto; object-fit: contain; display: block;
+    background-color: var(--white);
 }
 .alphabet-card-info {
     padding: 20px; text-align: left;
@@ -286,7 +289,8 @@ a { text-decoration: none; color: inherit; }
 .safety-banner-info p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; }
 .safety-banner-media { flex: 1; max-width: 440px; }
 .safety-banner-img {
-    width: 100%; border-radius: 18px; border: 3px solid var(--white);
+    width: 100%; height: auto; object-fit: contain;
+    border-radius: 18px; border: 3px solid var(--white);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: block;
 }
 
